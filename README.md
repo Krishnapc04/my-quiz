@@ -10,14 +10,10 @@ In the project directory, you can run:
 
 Open the app in the Code Editor and make sure you are in you Cloned folder .\
 Run the command : **npm install** .\
-After downloading this package run command : **cd .\Backend\**.\
-After navigating to Backend FOlder run command : **npm install**
-After installing all dependencies navigate back to cloned folder : **cd ../**
+After downloading this package run command : **cd .\Backend** .\
+After navigating to Backend FOlder run command : **npm install** .\
+After installing all dependencies navigate back to cloned folder : **cd ../** .\
 
-
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
 ### `npm run both`
 
