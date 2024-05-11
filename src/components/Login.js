@@ -14,7 +14,7 @@ const Login = () => {
             body: JSON.stringify({email:credentials.email , password : credentials.password }),
           });
           const json = await response.json();
-          console.log(json)
+          // console.log(json)
           if(json.success){
             //Redirect and save auth token
             localStorage.setItem("token",json.authToken)

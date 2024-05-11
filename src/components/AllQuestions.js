@@ -9,9 +9,9 @@ const AllQuestions = () => {
   const { question, getQuestions } = context;
   const [selectedOptions, setSelectedOptions] = useState({});
   const [showQuiz, setShowQuiz] = useState(false);
-  const [timer, setTimer] = useState(time)
   var marks = 0
   var time=question.length*60
+  const [timeout, setTimer] = useState(time)
   // var time = 3
   const handleChange = (e) => {
     const questionId = e.target.id;
@@ -42,7 +42,13 @@ const AllQuestions = () => {
   };
   
     const Over = ()=>{
-      ref.current.click()
+      // const timeout=time
+      if(question.length>0){
+        setTimeout(() => {
+          ref.current.click()
+          // console.log(typeof(timeout))
+        }, timeout*500);
+      }
     }
   
 const ref = useRef(null)
@@ -50,12 +56,10 @@ const ref = useRef(null)
     <>
       <h1>Questions for Quiz:</h1>
       {!showQuiz&&<button type="button" className="btn btn-primary" onClick={()=>{return (
-        setShowQuiz(true),setTimeout(() => {
-         Over()
-        }, 5000)
+        setShowQuiz(true), Over()
       )}}>Start Quiz</button>}
       {showQuiz&&<div className="container">
-        <h3>Your Time to Solve this quiz is : {time} sec </h3>
+        <h3>Your Time to Solve this quiz is : {time/2} sec </h3>
         {question.length > 0 ? (
           question.map((question, index) => {
             if (question !== undefined) {

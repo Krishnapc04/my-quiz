@@ -1,8 +1,9 @@
 const mongoose = require("mongoose")
-const mongoURI = "mongodb://localhost:27017/myquiz"
-// Create a connection to the database using Mongoose
+const { MongoClient } = require("mongodb");
 
+const mongoURI = "mongodb+srv://krishnachaudhari2309:Krishna%401114@quiz.6oomtii.mongodb.net/"
 const connectToMongo = () =>{
     mongoose.connect(mongoURI)
+    
 }
 module.exports= connectToMongo;

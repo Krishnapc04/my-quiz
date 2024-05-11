@@ -1,6 +1,10 @@
 const connectToMongo = require("./db");
 const express = require("express");
 var cors = require('cors')
+// const { MongoClient } = require("mongodb");
+// const mongoURI = "mongodb+srv://hakkahumma:Krishna@1114@cluster0.k6oddlm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+// const client = new MongoClient(mongoURI);
+// client.connect();
 
 
 connectToMongo();
