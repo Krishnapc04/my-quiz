@@ -4,7 +4,7 @@ import { useState } from "react";
 // create a state 
 
 const QuestionState = (props) =>{
-    const host = "http://localhost:5000"
+    const host = "http://localhost:5010"
     const initialQuestion = []
     const [question, setQuestion] = useState(initialQuestion)
     // get questions from the server

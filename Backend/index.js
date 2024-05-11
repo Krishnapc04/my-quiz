@@ -24,4 +24,4 @@ app.get('/about',  (req, res) => {
 app.use('/api/admin', require('./routes/admin'))
 app.use('/api/question',require('./routes/quiz'))
 
-app.listen(5000)
+app.listen(5010)
