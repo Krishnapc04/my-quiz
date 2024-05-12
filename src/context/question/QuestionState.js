@@ -34,6 +34,7 @@ const QuestionState = (props) =>{
     }
 // Delete Question 
     const deleteQuestion = async (id) => {
+      // eslint-disable-next-line 
         const response = await fetch(`${host}/api/question/deletequestion/${id}`, {
             method: "DELETE",
             headers: {
